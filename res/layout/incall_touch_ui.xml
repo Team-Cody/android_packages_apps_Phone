@@ -26,8 +26,8 @@
      -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:prvandroid="http://schemas.android.com/apk/prv/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     >
 
     <!--
@@ -46,11 +46,11 @@
     -->
     <com.android.internal.widget.multiwaveview.MultiWaveView
         android:id="@+id/incomingCallWidget"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-46dp"
-        android:background="@android:color/black"
+        android:layout_marginBottom="-46.0dip"
+        android:background="@android:color/transparent"
         android:visibility="gone"
 
         prvandroid:targetDrawables="@array/incoming_call_widget_3way_targets"
@@ -65,8 +65,8 @@
         prvandroid:leftChevronDrawable="@*android:drawable/ic_lockscreen_chevron_left"
         prvandroid:rightChevronDrawable="@*android:drawable/ic_lockscreen_chevron_right"
         prvandroid:feedbackCount="3"
-        prvandroid:horizontalOffset="0dip"
-        prvandroid:verticalOffset="20dip"
+        prvandroid:horizontalOffset="0.0dip"
+        prvandroid:verticalOffset="20.0dip"
         />
 
     <!--
@@ -74,8 +74,8 @@
         (or calls) is in progress
     -->
     <RelativeLayout android:id="@+id/inCallControls"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:layout_alignParentTop="true"
                     android:visibility="gone"
                     >
@@ -83,15 +83,15 @@
              (above the main cluster of buttons.) -->
         <ViewStub android:id="@+id/dtmf_twelve_key_dialer_stub"
                   android:layout="@layout/dtmf_twelve_key_dialer_view"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
                   android:layout_above="@+id/bottomButtons"
                   android:layout_marginBottom="@dimen/dialpad_vertical_margin" />
 
         <!-- Main cluster of onscreen buttons on the lower part of the screen. -->
         <LinearLayout android:id="@+id/bottomButtons"
                       android:orientation="vertical"
-                      android:layout_width="match_parent"
+                      android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:layout_alignParentBottom="true"
                       >
@@ -102,7 +102,7 @@
                  For now, at least, there's only ever one button visible here
                  at a time, so this can be a simple FrameLayout. -->
             <FrameLayout android:id="@+id/extraButtonRow"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dialpad_background_opaque"
                 android:paddingLeft="@dimen/button_cluster_side_padding"
@@ -117,7 +117,7 @@
                 <!-- This button is used only on GSM devices, during a conference call. -->
                 <LinearLayout android:id="@+id/manageConferenceButton"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
                     >
@@ -141,7 +141,7 @@
                      button might need to be enabled at the same time.) -->
                 <LinearLayout android:id="@+id/cdmaMergeButton"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
                     >
@@ -167,13 +167,13 @@
                  can have a background drawable distinct from the image itself. -->
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/end_call_background"
                 >
                 <ImageButton android:id="@+id/endButton"
                     style="@style/InCallEndButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:src="@drawable/ic_end_call"
                     android:contentDescription="@string/onscreenEndCallText"
                     />
@@ -185,7 +185,7 @@
                  ringing. -->
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dialpad_background"
                 android:paddingLeft="@dimen/button_cluster_side_padding"
@@ -205,9 +205,9 @@
                      GONE. -->
 
                 <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_height="fill_parent" />
 
                 <!-- "Dialpad" -->
                 <!-- This is a "compound button": it has checked and unchecked states. -->
@@ -218,9 +218,9 @@
                     />
 
                 <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_height="fill_parent" />
 
 
                 <!-- "Audio mode" -->
@@ -236,9 +236,9 @@
                     />
 
                 <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_height="fill_parent" />
 
                 <!-- "Mute" -->
                 <!-- This is a "compound button": it has checked and unchecked states. -->
@@ -249,9 +249,9 @@
                     />
 
                 <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_height="fill_parent" />
 
                 <!-- This slot is either "Hold" or "Swap", depending on
                      the state of the call.   One or the other of these
@@ -271,9 +271,9 @@
                     />
 
                 <View android:id="@+id/holdSwapSpacer"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_height="fill_parent" />
 
                 <!-- This slot is either "Add" or "Merge", depending on
                      the state of the call.  One or the other of these
@@ -295,9 +295,9 @@
                     />
 
                 <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_height="fill_parent" />
 
             </LinearLayout>
 
